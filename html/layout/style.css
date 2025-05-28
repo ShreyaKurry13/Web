@@ -1,0 +1,45 @@
+header a{
+    color: #9B7EBD !important;
+}
+
+header a:hover{
+    color: orange !important;
+}
+
+@media only screen and (max-width:600px){
+    .logo{text-align: center;}
+    .top-menu{justify-content: center !important;}
+}
+
+.brand a{
+    color: #ff5031;
+}
+
+footer{
+    background-color: #FFDCDC;
+    min-height: 100px;
+}
+
+footer a{
+    color: #6d4dff !important;
+}
+
+footer a:hover{
+    color: #582604 !important;
+}
+
+.ask-eva{
+    width: 75px; height: 75px;
+    position: fixed;
+    right: 20px; bottom: 20px;
+}
+
+.ask-eva img{
+    width: 100px; height: 100px;
+}
+
+.main-menu{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}

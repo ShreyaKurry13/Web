@@ -6,3 +6,8 @@ iframe - youtube videos
 circle 
 
 triangle
+
+canvas tag
+
+what is the http status code for redirection??
+
