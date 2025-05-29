@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+<body>
+   <div class="container">
+        <div class="col-xl-8 pt-5">
+            <label>Enter Number1 : </label>
+            <input type="text" id="input1" class="col-sm-6 col-form-label" /><br><br>
+            <label>Enter Number2 : </label>
+            <input type="text" id="input2" class="col-sm-6 col-form-label" /> 
+            <br><br>
+            <button id="add" class="btn btn-success m-4">+</button>
+            <button id="sub" class="btn btn-warning m-4">-</button>
+            <button id="mul" class="btn btn-danger m-4">*</button>
+            <button id="div" class="btn btn-primary m-4">/</button>
+            <p id="message">....</p>
+
+            <div class="col-xl-6 border pt-2">
+                <span>0000</span>
+            </div>
+        </div>
+   </div>
+</body>
+</html>
+
+
+<script>
+    document.getElementById('add').onclick = function(){
+        // alert('clicked');
+        var num1 = document.getElementById('input1').value;
+        var num2 = document.getElementById('input2').value;
+        console.log(num1);
+        console.log(num2);
+
+        if( num1=='' || num2=='')
+        {
+            document.getElementById('message').innerText = 'Value Required';
+            document.getElementById('message').className = 'alert alert-danger';
+        }
+        else if( isNaN(num1) || isNaN(num2))
+        {
+            document.getElementById('message').innerText = 'Values Must Be A Number';
+            document.getElementById('message').className = 'alert alert-danger';
+        }
+        else if(num1<0 || num2<0)
+        {
+            document.getElementById('message').innerText = 'Values Must Be A Positive number';
+            document.getElementById('message').className = 'alert alert-danger';
+        }
+        else
+        {
+            document.getElementById('message').innerText = '';
+            num1 = Number(num1);
+            num2 = Number(num2);
+
+            var result = num1+num2;
+
+            console.log(document.getElementsByTagName('span'));
+
+            document.getElementsByTagName('span')[0].innerHTML = result;
+            
+        }
+    }
+
+    document.getElementById('sub').onclick = function(){
+        // alert('clicked');
+        var num1 = document.getElementById('input1').value;
+        var num2 = document.getElementById('input2').value;
+        console.log(num1);
+        console.log(num2);
+
+        if( num1=='' || num2=='')
+        {
+            document.getElementById('message').innerText = 'Value Required';
+            document.getElementById('message').className = 'alert alert-danger';
+        }
+        else if( isNaN(num1) || isNaN(num2))
+        {
+            document.getElementById('message').innerText = 'Values Must Be A Number';
+            document.getElementById('message').className = 'alert alert-danger';
+        }
+        else if(num1<0 || num2<0)
+        {
+            document.getElementById('message').innerText = 'Values Must Be A Positive number';
+            document.getElementById('message').className = 'alert alert-danger';
+        }
+        else
+        {
+            document.getElementById('message').innerText = '';
+            num1 = Number(num1);
+            num2 = Number(num2);
+
+            var result = num1-num2;
+
+            console.log(document.getElementsByTagName('span'));
+
+            document.getElementsByTagName('span')[0].innerHTML = result;
+            
+        }
+    }
+
+    document.getElementById('mul').onclick = function(){
+        // alert('clicked');
+        var num1 = document.getElementById('input1').value;
+        var num2 = document.getElementById('input2').value;
+        console.log(num1);
+        console.log(num2);
+
+        if( num1=='' || num2=='')
+        {
+            document.getElementById('message').innerText = 'Value Required';
+            document.getElementById('message').className = 'alert alert-danger';
+        }
+        else if( isNaN(num1) || isNaN(num2))
+        {
+            document.getElementById('message').innerText = 'Values Must Be A Number';
+            document.getElementById('message').className = 'alert alert-danger';
+        }
+        else if(num1<0 || num2<0)
+        {
+            document.getElementById('message').innerText = 'Values Must Be A Positive number';
+            document.getElementById('message').className = 'alert alert-danger';
+        }
+        else
+        {
+            document.getElementById('message').innerText = '';
+            num1 = Number(num1);
+            num2 = Number(num2);
+
+            var result = num1*num2;
+
+            console.log(document.getElementsByTagName('span'));
+
+            document.getElementsByTagName('span')[0].innerHTML = result;
+            
+        }
+    }
+
+    document.getElementById('div').onclick = function(){
+        // alert('clicked');
+        var num1 = document.getElementById('input1').value;
+        var num2 = document.getElementById('input2').value;
+        console.log(num1);
+        console.log(num2);
+
+        if( num1=='' || num2=='')
+        {
+            document.getElementById('message').innerText = 'Value Required';
+            document.getElementById('message').className = 'alert alert-danger';
+        }
+        else if( isNaN(num1) || isNaN(num2))
+        {
+            document.getElementById('message').innerText = 'Values Must Be A Number';
+            document.getElementById('message').className = 'alert alert-danger';
+        }
+        else if(num1<0 || num2<0)
+        {
+            document.getElementById('message').innerText = 'Values Must Be A Positive number';
+            document.getElementById('message').className = 'alert alert-danger';
+        }
+        else
+        {
+            document.getElementById('message').innerText = '';
+            num1 = Number(num1);
+            num2 = Number(num2);
+
+            var result = num1/num2;
+
+            console.log(document.getElementsByTagName('span'));
+
+            document.getElementsByTagName('span')[0].innerHTML = result;
+            
+        }
+    }
+</script>

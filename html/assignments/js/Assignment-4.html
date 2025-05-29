@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6">
+                <h3 class="pt-5 pb-5">Interest Calculator</h3>
+                <label>Principal Amount : </label>
+                <input id="amt" type="text" class="col-xl-6 m-2 col-form-control"/><br>
+
+                <label>Rate of Interest : </label>
+                <input id="roi" type="text" class="col-xl-6 m-2 col-form-control"/><br>
+
+                <label>Period : </label>
+                <input id="time" type="text" class="col-xl-6 m-2 col-form-control"/><br>
+               
+                <button id="btn" class="col-xl-6 m-4 btn btn-success">Calculate</button>
+                <p id="message">....</p>
+            </div>
+            <div class="pt-5">
+                <h3>Interest: <span>0000</span></h3>
+                <h3>Total: <span>0000</span></h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    document.getElementById('btn').onclick = function(){
+
+    var p = document.getElementById('amt').value;
+    var r = document.getElementById('roi').value;
+    var t = document.getElementById('time').value;
+     
+    if( p=='' || r=='' || t=='')
+    {
+        document.getElementById('message').innerText = 'Values Required';
+        document.getElementById('message').className = 'alert alert-danger';
+    }
+    else if( isNaN(p) || isNaN(r) || isNaN(t) )
+    {
+        document.getElementById('message').innerText = 'Values Must Be A Number';
+        document.getElementById('message').className = 'alert alert-danger';
+    }
+    else if( p<0 || r<0 || t<0 )
+    {
+        document.getElementById('message').innerText = 'Values Must Be A Positive number';
+        document.getElementById('message').className = 'alert alert-danger';
+    }
+    else{
+        document.getElementById('message').innerText = '';
+        p = Number(p);
+        r = parseFloat(r);
+        t = parseInt(t)
+
+        let result = p*r*t / 100;
+
+        console.log(document.getElementsByTagName('span'));
+        
+        document.getElementsByTagName('span')[0].innerText=result;
+        document.getElementsByTagName('span')[1].innerText=result*12;
+    }
+}
+</script>

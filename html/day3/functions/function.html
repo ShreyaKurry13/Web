@@ -1,0 +1,15 @@
+<script>
+    //Named function
+
+    function homeLoan(P,N,R=9)
+    {
+        console.log(P,N,R);
+        N = N*12;
+        R = R/12/100;
+        let emi = P*R*(1+R)**N / ((1+R)**N-1);
+        console.log(emi);
+    }
+
+    homeLoan(2500000,30,8.45);
+    homeLoan(2500000,30)
+</script>
