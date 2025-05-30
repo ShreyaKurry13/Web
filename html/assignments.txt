@@ -11,3 +11,18 @@ canvas tag
 
 what is the http status code for redirection??
 
+1 general function to print n number of series
+stock average
+austria assignment
+
+
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+
+default ports
+mongodb --27017
+MySQL -- 3306
+oracle -- 1521
+

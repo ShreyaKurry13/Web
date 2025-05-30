@@ -1,0 +1,27 @@
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<input type="text" id="txt">
+<button id="btn">Get Data</button>
+<p></p>
+
+<script>
+    const APIKEY ='36e1575e4dd4d02d3fee92c6c81679dc';
+
+    document.getElementById('btn').addEventListener('click' ,() => {
+        var city = document.getElementById('txt').value;
+        var apiPath = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKEY}`;
+        console.log(apiPath);
+        console.log(axios);
+        
+        var result = axios.get(apiPath);
+        console.log(result);
+        
+        result.then(answer =>{
+            console.log(answer);
+            console.log(answer.data);
+            console.log(answer.data.wind.speed);
+
+            document.querySelector('p').innerHTML=answer.data.wind.speed;
+        });
+    });
+</script>
