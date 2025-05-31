@@ -1,0 +1,18 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<button>Enter</button>
+
+<p style="border: solid;width: 150px;height: 150px;">hello</p>
+
+<script>
+    $(document).ready(function(){
+        $('button').click(function(){
+            $('p').animate({
+                'margin-left':'400px',
+                'font-size':'40px',
+                'border-radius':'50%',
+                'background':'gray'   //doesnt work cuz only px values work in animations
+            },3000);
+        })
+    })
+</script>

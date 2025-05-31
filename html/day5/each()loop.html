@@ -1,0 +1,30 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+
+<div> Hello </div>
+<div> Hello </div>
+<div> Hello </div>
+<div> Hello </div>
+<div> Hello </div>
+<div> Hello </div>
+<div> Hello </div>
+<div> Hello </div>
+<div> Hello </div>
+<div> Hello </div>
+
+<script>
+    jQuery(document).ready(function(){
+        var wi = 100;
+        $("div").each(function(i,val){
+            console.log(val);
+            $(this).css("width",wi+"px");
+            wi+=100;
+        })
+    })
+</script>
+
+<style>
+    div{
+        border: solid;
+    }
+</style>

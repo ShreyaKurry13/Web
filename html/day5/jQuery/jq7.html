@@ -1,0 +1,30 @@
+<script>
+    // regPincode = /^[1-9][\d]{5}$/;
+    // var pincode = 400010;
+    // var result = regPincode.test(pincode);
+    // console.log(result);    
+
+    // regPancard = /^([a-zA-Z]{5})([0-9]{4})([A-z])$/
+    // var pancard = 'ABCDe1234K';
+    // var result = regPancard.test(pancard);
+    // console.log(result);
+
+    // var regName = /^[A-z]([A-z ]{1,})?[A-z]$/
+    // reg1 = new RegExp(regName);
+    // console.log(reg1.test('sa'));
+    // console.log(reg1.test('shreya'));
+    // console.log(reg1.test('Shreya Kurry'));
+    // console.log(reg1.test('Shreya S Kurry'));
+
+    var regEmail = /^([\w]+)@([\w]+)\.([\w]+)$/
+    reg1 = new RegExp(regEmail);
+    // console.log(reg1.test('xy@gmail.com'));
+
+    var regPass = /^(?=.*[\d])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#\-\$]).{4,12}$/
+    reg1 = new RegExp(regPass);
+    console.log(reg1.test('@Mk1'));
+    console.log(reg1.test('K@#12n'));
+    console.log(reg1.test('Mk12'));
+    console.log(reg1.test('$N8m'));
+    
+</script>

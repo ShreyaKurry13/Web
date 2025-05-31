@@ -1,0 +1,23 @@
+<script>
+    var a = 100;
+    var b = 200;
+
+    function myFunc(){
+        console.log(a,b);
+
+        function f1(){
+            console.log(a,b);
+        }
+        f1();
+    }
+    myFunc(); 
+
+    function Outer(a){
+        return(b) =>{
+            return(c)=>{
+                console.log(a+b+c);
+            }
+        }
+    }
+    Outer(10)(20)(30);
+</script>

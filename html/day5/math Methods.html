@@ -1,0 +1,24 @@
+<script>
+    console.log(Math);
+    console.log(Math.sqrt(100));
+    console.log(Math.pow(2,6));
+    console.log(Math.round(90.999));
+    console.log(Math.min(1,2,89,90));
+    console.log(Math.max(1,2,89,90));
+    console.log(Math.abs(-90));
+    console.log(Math.random());
+
+    var no1 = Math.round(10 * Math.random());
+    var no2 = Math.round(10 * Math.random());
+    console.log(no1,no2);
+    
+
+    var ans = prompt(`Enter ${no1} + ${no2}`);
+
+    if(ans == no1+no2){
+        console.log("ok");
+    }
+    else{
+        console.log(`invalid`);
+    }
+</script>
